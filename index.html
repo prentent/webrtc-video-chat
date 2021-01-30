@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>WebRTC: Simple RTCDataChannel sample</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css" type="text/css" media="all">
+  <script src="adapter.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+
+  <div class="controlbox">
+    <button id="connectButton" name="connectButton">
+      Connect
+    </button>
+    <button id="connectanserButton" name="connectanserButton">
+      ConnectAnser
+    </button>
+    <button id="disconnectButton" name="disconnectButton" disabled>
+      Disconnect
+    </button>
+  </div>
+  <div>
+    <button id="iceButton" name="iceButton" disabled>
+      设置ICE
+    </button>
+    <textarea id="icetextarea" name="icetextarea" rows="6" disabled></textarea>
+  </div>
+  <div>
+    <button id="offerButton" name="offerButton" disabled>
+      设置OFFER
+    </button>
+    <textarea id="offertextarea" name="offertextarea" rows="6" disabled></textarea>
+  </div>
+  <div>
+    <button id="anserButton" name="anserButton" disabled>
+      设置ANSER
+    </button>
+    <textarea id="ansertextarea" name="ansertextarea" rows="6" disabled></textarea>
+  </div>
+  <div class="camerabox">
+    <video id="received_video" autoplay width="300" height="200" muted></video>
+    <video id="local_video" autoplay width="300" height="200" muted></video>
+  </div>
+  <div class="messagebox">
+    <label for="message">输入一个消息:
+      <input type="text" name="message" id="message" placeholder="Message text" inputmode="latin" size=60 maxlength=120
+        disabled>
+    </label>
+    <button id="sendButton" name="sendButton" class="buttonright" disabled>
+      发送
+    </button>
+  </div>
+  <div class="messagebox" id="receivebox">
+    <p>收到的消息:</p>
+  </div>
+</body>
+
+</html>
